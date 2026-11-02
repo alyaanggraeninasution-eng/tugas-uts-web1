@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - BookStore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="dashboard-container">
+    <h1>Pemesanan Buku</h1>
+    <a href="dashboard.html">← Kembali ke Dashboard</a>
+
+    <h2>Informasi Pemesanan</h2>
+
+    <form id="formCheckout">
+        <label>Nama Pemesan</label>
+        <input type="text" id="namaPemesan" required>
+
+        <label>Email</label>
+        <input type="email" id="emailPemesan" required>
+
+        <label>Alamat</label>
+        <input type="text" id="alamatPemesan" required>
+
+        <label>Pilih Buku</label>
+        <select id="pilihBuku" required>
+            <option value="">-- Pilih Buku --</option>
+        </select>
+
+        <label>Jumlah Buku</label>
+        <input type="number" id="jumlahBuku" min="1" value="1" required>
+
+        <label>Metode Pembayaran</label>
+        <select id="pembayaran" required>
+            <option value="">-- Pilih Pembayaran --</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="E-Wallet">E-Wallet</option>
+            <option value="COD">COD</option>
+        </select>
+
+        <button type="submit">Buat Pesanan</button>
+    </form>
+
+    <h2>Daftar Pemesanan</h2>
+
+    <table class="tabel-buku">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Buku</th>
+                <th>Jumlah</th>
+                <th>Total</th>
+                <th>Pembayaran</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tabelPesanan"></tbody>
+    </table>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - BookStore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="dashboard-container">
+    <h1>Katalog Buku</h1>
+    <p>Daftar stok buku yang tersedia di toko.</p>
+    <a href="dashboard.html">← Kembali ke Dashboard</a>
+
+    <h2>Tambah Stok Buku</h2>
+    <form id="formStok">
+        <input type="text" id="judul" placeholder="Judul Buku" required>
+        <input type="text" id="kategori" placeholder="Kategori/Jenis Buku" required>
+        <input type="text" id="edisi" placeholder="Edisi" required>
+        <input type="number" id="harga" placeholder="Harga (angka saja)" min="1" required>
+        <input type="number" id="stok" placeholder="Jumlah Stok" min="0" required>
+        <input type="text" id="cover" placeholder="Nama file foto (contoh: img/buku.jpg)">
+        <button type="submit">Tambah Buku</button>
+    </form>
+
+    <h2>Daftar Katalog</h2>
+    <div class="table-responsive">
+    <table class="tabel-buku">
+        <thead>
+            <tr>
+                <th>No</th><th>Foto</th><th>Kode</th><th>Judul</th>
+                <th>Kategori</th><th>Edisi</th><th>Harga</th><th>Stok</th>
+            </tr>
+        </thead>
+        <tbody id="tabelStok"></tbody>
+    </table>
+    </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - BookStore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="dashboard-container">
+    <h1>Tracking Pengiriman</h1>
+    <p>Lacak status pengiriman pesanan buku Anda.</p>
+
+    <a href="dashboard.html">← Kembali ke Dashboard</a>
+
+    <section class="tracking-search">
+        <h2>Cari Pengiriman</h2>
+
+        <form id="formTracking">
+            <label for="nomorDO">Nomor Delivery Order</label>
+            <input
+                type="text"
+                id="nomorDO"
+                placeholder="Contoh: DO001"
+                required
+            >
+            <button type="submit">Cari</button>
+        </form>
+    </section>
+
+    <section id="hasilTracking" class="tracking-result" style="display: none;">
+        <h2>Informasi Pengiriman</h2>
+
+        <p><strong>Nomor DO:</strong> <span id="hasilDO"></span></p>
+        <p><strong>Nama Pemesan:</strong> <span id="hasilNama"></span></p>
+        <p><strong>Status Pengiriman:</strong> <span id="hasilStatus"></span></p>
+
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <p id="persentase"></p>
+
+        <h3>Detail Pengiriman</h3>
+
+        <table class="tabel-buku">
+            <tr>
+                <th>Ekspedisi</th>
+                <td id="hasilEkspedisi"></td>
+            </tr>
+            <tr>
+                <th>Tanggal Kirim</th>
+                <td id="hasilTanggal"></td>
+            </tr>
+            <tr>
+                <th>Jenis Paket</th>
+                <td id="hasilPaket"></td>
+            </tr>
+            <tr>
+                <th>Total Pembayaran</th>
+                <td id="hasilTotal"></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
